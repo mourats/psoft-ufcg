@@ -1,0 +1,34 @@
+<!--UFCG
+Aluno: Thiago Santos de Moura - 116210967
+Disciplina: Projeto de Software-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+  <style  type="text/css">
+    @import url("estilo.css");
+  </style>
+</head>
+  	<h1 id='titulo'>Mural Projeto de Software - Thiago Moura</h1>
+  	
+  	<div id="listagem"></div>
+  	
+ 	<button type="button" onclick="mudarEstado('cadastro')">Cadatrar Nova Mensagem</button>
+ 	<div id="cadastro" style="display:none">
+  
+		<form id="formulario">
+       	<h3>Deixe uma mensagem: </h3>
+       	<p>Título:<input type="text" name="titulo" id="titulo"></p>
+       	<p>Mensagem:<input type="text" name="mensagem" id="mensagem"></p>
+       	<p>Author:<input type="text" name="author" id="author"></p>
+       	
+   		</form>
+
+		<button type="submit" form="formulario" value="Submit" onclick="cadastrar()">Enviar</button>
+
+ 	</div>
+  
+  	<script src="cliente.js"></script>
+</body>
