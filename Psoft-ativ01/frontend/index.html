@@ -3,32 +3,46 @@ Aluno: Thiago Santos de Moura - 116210967
 Disciplina: Projeto de Software-->
 
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title></title>
-  <style  type="text/css">
-    @import url("estilo.css");
-  </style>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/estilo.css">
+    <title>Projeto de Software</title>
 </head>
-  	<h1 id='titulo'>Mural Projeto de Software - Thiago Moura</h1>
-  	
-  	<div id="listagem"></div>
-  	
- 	<button type="button" onclick="mudarEstado('cadastro')">Cadatrar Nova Mensagem</button>
- 	<div id="cadastro" style="display:none">
-  
-		<form id="formulario">
-       	<h3>Deixe uma mensagem: </h3>
-       	<p>Título:<input type="text" name="titulo" id="titulo"></p>
-       	<p>Mensagem:<input type="text" name="mensagem" id="mensagem"></p>
-       	<p>Author:<input type="text" name="author" id="author"></p>
-       	
-   		</form>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-mycolor">
+  <a class="navbar-brand font-weight-bold" href="#">MURAL</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-		<button type="submit" form="formulario" value="Submit" onclick="cadastrar()">Enviar</button>
-
- 	</div>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="navbar-brand text-white font-weight-bold" href="enviar.html">Enviar Mensagem <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="navbar-brand text-white font-weight-bold" href="deletar.html">Deletar Mensagem <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item active">
+        <a class="navbar-brand text-white font-weight-bold" href="https://daltonserey.github.io/projsw-20181/">Site Disciplina <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <a href="https://github.com/thiagosantos18"><img src="img/github.svg" class="img-fluid float-right" alt="Responsive image"></a>
+  </div>
+</nav>
   
-  	<script src="cliente.js"></script>
-</body>
+  	<script src="js/cliente.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="js/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+  </body>
+</html>
