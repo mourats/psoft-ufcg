@@ -5,15 +5,43 @@ Disciplina: Projeto de Software
 */
 
 
+if(typeof moment!=="undefined"){moment.locale("pt-BR")}
+
 const listagem_view = document.getElementById('listagem');
 
 const mensagens = [];
 var msg = {};
 
 function update_view() {
-    const items = mensagens.map(e => `<li>${e.title}, ${e.msg}, ${e.created_at}, ${e.author}</li>`).join("\n");
-    listagem_view.innerHTML = '<ul>' + items + '</ul>';
+       
+    const items = mensagens.map(e => {
+    	
+    	if(e.author !== "Ígaru"){
+    	const color = generate_color();
+    	const msg=`<p>${e.msg}</p>`;
+    	const title=`<div class="title">${e.title}</div>`;
+    	const who_when=`<div class="dono font-italic">${e.author}, há ${moment(e.created_at).fromNow()}</div>`;
+    	const tudo=`<div>${title}${msg}${who_when}</div>`;
+    	
+    	return`<div class="mensagem ${color}">${tudo}</div>`}}).join("");
+    
+    
+    listagem_view.innerHTML='<div class="mural">'+items+"</div>";
 }
+
+function generate_color() {
+
+	  random = Math.floor(Math.random() * (4 - 1)) + 1;
+	  
+	  if(random === 1){
+	    return "bg-primary";
+	  }else if(random === 2){
+	    return "bg-secondary";
+	  }else{
+	    return "bg-info";
+	  }
+}
+
 
 function cadastrar() {
 	
@@ -38,7 +66,6 @@ function cadastrar() {
 
 }
 
-
 function mudarEstado(entrada) {
 	  var display = document.getElementById(entrada).style.display;
 	  if (display == "none")
@@ -49,12 +76,21 @@ function mudarEstado(entrada) {
 
 
 
-
-fetch('http://150.165.85.16:9900/api/msgs')
-.then(r => r.json())
-.then(data => {
-    Object.assign(mensagens, data);
-    update_view();
-})
+fetch('http://150.165.85.16:9900/api/msgs') .then(r => r.json()) .then(data => {
+	Object.assign(mensagens, data);
+	mensagens.sort((a,b)=>moment(b.created_at)-moment(a.created_at));
+	update_view(); })
 
 
+/*
+function load_messages(){
+	const promise = fetch("http://150.165.85.16:9900/api/msgs")
+	.then(r=>r.json())
+	.then(data=>{Object.assign(mensagens,data);mensagens.sort((a,b)=>moment(b.created_at)-moment(a.created_at))})
+	.catch(()=>{alert("Sem conexão para a Internet?")});return promise}
+
+(function(){load_messages().then(()=>update_view());
+frontend_id = frontend_input.value=localStorage.getItem("frontend_id");
+secret=secret_input.value=localStorage.getItem("secret");
+update_button_new_message()})();
+*/

@@ -1,22 +1,55 @@
-h1 {
-	text-align: center;
-}
-
-h3 {
-	font-weight: bold;
-	text-align: center;
-}
-
 img {
-    padding: 5px;
-    width: 50px;
+	padding: 5px;
+	width: 42px;
 }
-
-.nav-my {
-	font-size: medium;
-}
-
 
 .bg-mycolor {
-    background-color: #34689c!important;
+	background-color: #34689c;
+}
+
+.text-black {
+	color: #000000;
+}
+
+.text-black:hover {
+	color: #000000;
+}
+
+.mural {
+	flex-wrap: wrap
+}
+
+.mensagem, .mural {
+	display: flex;
+	flex-direction: row
+}
+
+.mensagem {
+	border: 0 solid white;
+	border-radius: 15px;
+	margin: 10px;
+	padding: 16px;
+	color: black;
+	justify-content: space-between;
+	max-width: 160px
+}
+
+.mensagem p {
+	padding: 0 0 0 8px;
+	margin: 8px 8px 8px 0;
+	border-left: 3px solid bluegray
+}
+
+.mensagem .title {
+	padding: 0;
+	margin: 0;
+	font-size: 90%;
+	color: black;
+}
+
+.mensagem .who {
+	color: black;
+	font-size: 40%;
+	margin: 0 8px 0 0;
+	align-self: flex-end
 }

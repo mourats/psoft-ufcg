@@ -10,39 +10,58 @@ Disciplina: Projeto de Software-->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/estilo.css">
     <title>Projeto de Software</title>
 </head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-mycolor">
-  <a class="navbar-brand font-weight-bold" href="#">MURAL</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="navbar-brand text-white font-weight-bold" href="enviar.html">Enviar Mensagem <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="navbar-brand text-white font-weight-bold" href="deletar.html">Deletar Mensagem <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="navbar-brand text-white font-weight-bold" href="https://daltonserey.github.io/projsw-20181/">Site Disciplina <span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
-    <a href="https://github.com/thiagosantos18"><img src="img/github.svg" class="img-fluid float-right" alt="Responsive image"></a>
+<body>
+
+<ul class="nav nav-tabs justify-content-center bg-mycolor" id="myMenu" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link text-black font-weight-bold active" id="home-tab" data-toggle="tab" href="#mural" role="tab" aria-controls="mural" aria-selected="true">Home</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-black font-weight-bold" id="profile-tab" data-toggle="tab" href="#enviar" role="tab" aria-controls="enviar" aria-selected="false">Enviar Mensagem</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link text-black font-weight-bold" id="messages-tab" data-toggle="tab" href="#deletar" role="tab" aria-controls="deletar" aria-selected="false">Deletar Mensagem</a>
+  </li>
+  <li>
+    <a class="nav-link text-black font-weight-bold" href="https://daltonserey.github.io/projsw-20181/" aria-selected="false">Site da Disciplina</a>
+  </li>
+  <li>
+  <a href="https://github.com/thiagosantos18"><img src="img/github.svg" class="img-fluid float-right" alt="Responsive image"></a>
+  </li>
+</ul>
+ 
+
+<div class="tab-content">
+  <div class="tab-pane active container" id="mural" role="tabpanel" aria-labelledby="mural-tab">
+   <div id= "listagem"></div>
   </div>
-</nav>
+   
+  
+  <div class="tab-pane" id="enviar" role="tabpanel" aria-labelledby="enviar-tab">tudo</div>
+  
+  <div class="tab-pane" id="deletar" role="tabpanel" aria-labelledby="deletar-tab">bom</div>
+</div>
+
+<script>
+  $(function () {
+    $('#myMenu li:last-child a').tab('show')
+  })
+</script>
+
+	
   
   	<script src="js/cliente.js"></script>
+  	<script src="js/moment-with-locales.min.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="js/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js" ></script>
   </body>
 </html>
