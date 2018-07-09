@@ -6,7 +6,7 @@ Disciplina: Projeto de Software
 
 
 if(typeof moment!=="undefined"){moment.locale("pt-BR")}
-
+const fetch = require("node-fetch");
 const listagem_view = document.getElementById('listagem');
 
 const mensagens = [];
