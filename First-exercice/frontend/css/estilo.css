@@ -24,15 +24,7 @@ img {
 	flex-direction: row
 }
 
-.mensagem {
-	border: 0 solid white;
-	border-radius: 15px;
-	margin: 10px;
-	padding: 16px;
-	color: black;
-	justify-content: space-between;
-	max-width: 160px
-}
+
 
 .mensagem p {
 	padding: 0 0 0 8px;

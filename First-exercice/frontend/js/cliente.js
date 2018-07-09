@@ -30,16 +30,7 @@ function update_view() {
 }
 
 function generate_color() {
-
-	  random = Math.floor(Math.random() * (4 - 1)) + 1;
-	  
-	  if(random === 1){
-	    return "bg-primary";
-	  }else if(random === 2){
-	    return "bg-secondary";
-	  }else{
-	    return "bg-info";
-	  }
+	  return Math.floor(Math.random()*(4-1))+1 === 1?  "bg-mycolor" : "bg-primary";
 }
 
 
