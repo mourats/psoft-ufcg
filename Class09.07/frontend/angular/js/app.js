@@ -27,16 +27,18 @@ function dados2() {
  app.factory("dados2", dados2)
 
 
-
-
-
-
-
 app.controller('AppCtrl', AppCtrl);
 
 function AppCtrl(meusDados, dados2) {
   const vm = this;
   vm.meusDados = meusDados;
-  vm.dados2;
+  vm.dados2 = dados2.fetch();
   vm.msg = "oi eu vim do controller";
+}
+
+app.controller('AppCtrl2', AppCtrl2);
+
+function AppCtrl2(meusDados) {
+  const vm = this;
+  vm.msg = "oi eu vim do controller também!";
 }
